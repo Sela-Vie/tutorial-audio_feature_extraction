@@ -9,11 +9,13 @@
 ## TODO
 ```
 DONE    get example csv to use for this tutorial    
-DONE    normal decision tree classifier
-DONE    how to use hyper-parameters
-DONE    how to manually check predictions
-TODO    how to save a model for later
-TODO    how to how the file model saved for later works
-TODO    how to use a model saved for later
-TODO    how to add pipelines for models saved for later
+
+TODO    learn how to transform magnitude spectra
+TODO    learn how to use magnitude spectra in an RFC
+TODO    learn how to transform MFCC
+TODO    learn how to use MFCC in an RFC
+TODO    learn how to transform LPCC
+TODO    learn how to use LPCC in an RFC
+TODO    learn how to transform PLP
+TODO    learn how to use PLP in an RFC
 ```

@@ -20,6 +20,6 @@ cd "$absolute_directory_m0"
 
 # these commands are totally save to run again
 venv_name="venv"
-([ -d venv ] || python3 -m venv $venv_name) && source "$venv_name/bin/activate"
+([ -d "$venv_name" ] || python3 -m venv "$venv_name") && source "$venv_name/bin/activate"
 
 pip install -r requirements.txt

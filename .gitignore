@@ -28,3 +28,4 @@ Samples
 Vocals
 venv
 *.csv
+*.npy

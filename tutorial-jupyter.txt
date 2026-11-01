@@ -1,0 +1,10 @@
+
+
+jupyter server list
+
+jupyter server --generate-config --config=./.jupyter/jupyter_server_config.py
+
+jupyter lab --no-browser --port=8800 --ip=0.0.0.0 --config="./.jupyter/jupyter_server_config.py"
+
+jupyter notebook --no-browser --config="./.jupyter/jupyter_server_config.py
+jupyter lab --config="./.jupyter/jupyter_server_config.py"

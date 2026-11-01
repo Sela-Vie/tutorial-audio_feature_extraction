@@ -2,13 +2,18 @@
 
 c = get_config()  #noqa
 
+
 c.ServerApp.ip = '0.0.0.0'
-c.ServerApp.password = "argon2:$argon2id$v=19$m=10240,t=10,p=8$7dsdYS0s0dv9lHGZfEVRmA$k9tXpiorX0KQlxTudRxaJUhHWHwm+Bqs5sCfCqFDOGc"
-c.PasswordIdentityProvider.hashed_password = "argon2:$argon2id$v=19$m=10240,t=10,p=8$7dsdYS0s0dv9lHGZfEVRmA$k9tXpiorX0KQlxTudRxaJUhHWHwm+Bqs5sCfCqFDOGc"
 c.ServerApp.open_browser = False
 c.ServerApp.port = 4242
 
+# who cares, this will only be in local anyways (famous last words)
+c.ServerApp.password = "argon2:$argon2id$v=19$m=10240,t=10,p=8$7dsdYS0s0dv9lHGZfEVRmA$k9tXpiorX0KQlxTudRxaJUhHWHwm+Bqs5sCfCqFDOGc"
+c.PasswordIdentityProvider.hashed_password = "argon2:$argon2id$v=19$m=10240,t=10,p=8$7dsdYS0s0dv9lHGZfEVRmA$k9tXpiorX0KQlxTudRxaJUhHWHwm+Bqs5sCfCqFDOGc"
+
+print("="*50)
 print("LOADED CUSTOM JUPYTER SERVER CONFIG")
+print("="*50)
 
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration

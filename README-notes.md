@@ -6,6 +6,55 @@
 - quantization is resolution/bit depth
     - quantization is detail over pitch
     - detail in the y axis
+
+
+#### STEPS BREAKDOWN
+
+```
+      Speech signal
+            |
+            v
+ Pre-emphasis (optional)
+            |
+            v
+         Framing
+            |
+            v
+        Windowing
+            |
+            +--------------------------------------------------------------+
+            |                                                              |
+            v                                                              |
+           FFT                                                             |
+            |                                                              |
+            +--------------------+--------------------+                    |
+            |                    |                    |                    |
+            v                    v                    v                    v
+   [ Magnitude |X|  ]   [ Power spectrum ]   [ Power spectrum ]   [ Autocorrelation]
+            |                    |                    |                    |
+            v                    v                    v                    v
+   [ Log (optional) ]   [ Mel filterbank ]   [ Bark filterbank]   [ Levinson-Durbin]
+            |                    |                    |                    |
+            |                    v                    v                    v
+            |           [ Log            ]   [ Equal-loudness ]   [ LPC-to-cepstrum]
+            |                    |                    |                    |
+            |                    v                    v                    |
+            |           [ DCT            ]   [ Cube-root      ]            |
+            |                    |                    |                    |
+            |                    v                    v                    |
+            |           [ Keep 12-13 coef]   [ Inverse DFT    ]            |
+            |                    |                    |                    |
+            |                    |                    v                    |
+            |                    |           [ Levinson-Durbin]            |
+            |                    |                    |                    |
+            |                    |                    v                    |
+            |                    |           [ Cepstrum (opt.)]            |
+            |                    |                    |                    |
+            v                    v                    v                    v
+    MAGNITUDE SPECTRA          MFCC                 PLP                  LPCC
+```
+idk if were going to go autocorrelation for the PLP and LPCC
+
 #### CEPSTRUM
 - source: https://www.youtube.com/watch?v=SJo7vPgRlBQ&t=223s
 $$

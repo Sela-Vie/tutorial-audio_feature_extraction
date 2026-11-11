@@ -70,6 +70,25 @@ $$
 - note: `cepstrum` is an anagram of `spectrum`
 - note: MFCC is just a cepstrum converted to the mel scale
 
+#### FFT OUTPUTS (spectrum, magnitude power)
+
+why theres only 200 samples in magnitude and power spectrum
+
+context:
+- 400 samples
+- 16_000 hz sampling rate
+
+16_000 can reasonably measure at maximum 8_000 hz including negative frequencies (cuz that how measuring works)
+16_000 can reasonably measure at minimum 40 hz including negative frequencies (cuz 400 samples at 16_000 40hz is the biggest wave we can see)
+-8_000 to -40 AND +40 to +8_000
+negative and postitive frequencies are the see as the same in this context so we only care about
++40hz to +8_000hz with accuracy of 40hz
+0-40hz, 41-80hz, 81-120hz,... 
+
+spectrum is a complex number because it also holds the timings of the frequencies
+complex number us just 2 numbers stored as one
+the first number is the magnitude
+the second number is when it starts (does the wave begin at its peak, at zero, somewhere in between?)
 
 #### FFT vs. Short-Time FT
 

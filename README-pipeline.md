@@ -80,6 +80,10 @@ context:
 - 400 samples
 - 16_000 hz sampling rate
 
+##### bins an theoretically representable frequencies
+
+- highest theoretically representable frequency is defined by the ***Nyquist theorem***
+
 16_000 can reasonably measure at maximum 8_000 hz including negative frequencies (cuz that how measuring works)
 16_000 can reasonably measure at minimum 40 hz including negative frequencies (cuz 400 samples at 16_000 40hz is the biggest wave we can see)
 -8_000 to -40 AND +40 to +8_000
@@ -97,3 +101,14 @@ the first number is the ***magnitude***
 the second number is when it starts (does the wave begin at its peak, at zero, somewhere in between?)
 ***power*** is derived from *magnitude*^2/number_of_samples_in_frame
 - supposedly its an sum of the magnitudes of a frequency over many mins and then divided by the number of bins but my code doesnt do that so idk what it actually is
+
+#### MFCC
+
+|term|definition|
+|-|-|
+|***ROLLOFF_PERCENT***| breakpoint for the rolloff column feature |
+|***N_FFT***| specified to transfer specifications from last processing; to determine the n-bins of the fft |
+|***N_MELS***| is 26 because its a common speech-processing convention, not a required standard<br>(GONNA NEED A SOURCE TO USE THIS) |
+|***N_MFCC***| is 13 because its a common speech-processing convention, not a required standard; this also has not relation to N_MELS as long as N_MFCC is <= N_MELS (idk y but ok)<br>(GONNA NEED A SOURCE TO USE THIS) |
+|***F_MIN***| is specified to remove noise|
+|***F_MAX***| is specified to remove noise; defined by ***Nyquist theorem*** |

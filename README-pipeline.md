@@ -104,11 +104,16 @@ the second number is when it starts (does the wave begin at its peak, at zero, s
 
 #### MFCC
 
-|term|definition|
+|***CONFIG***|***DEFINITION***|
 |-|-|
-|***ROLLOFF_PERCENT***| breakpoint for the rolloff column feature |
-|***N_FFT***| specified to transfer specifications from last processing; to determine the n-bins of the fft |
-|***N_MELS***| is 26 because its a common speech-processing convention, not a required standard<br>(GONNA NEED A SOURCE TO USE THIS) |
-|***N_MFCC***| is 13 because its a common speech-processing convention, not a required standard; this also has not relation to N_MELS as long as N_MFCC is <= N_MELS (idk y but ok)<br>(GONNA NEED A SOURCE TO USE THIS) |
-|***F_MIN***| is specified to remove noise|
-|***F_MAX***| is specified to remove noise; defined by ***Nyquist theorem*** |
+|`ROLLOFF_PERCENT`| breakpoint for the rolloff column feature |
+|`N_FFT`| specified to transfer specifications from last processing; to determine the n-bins of the fft |
+|`N_MELS`| is 26 because its a common speech-processing convention, not a required standard<br>(GONNA NEED A SOURCE TO USE THIS) |
+|`N_MFCC`| is 13 because its a common speech-processing convention, not a required standard; this also has not relation to N_MELS as long as N_MFCC is <= N_MELS (idk y but ok)<br>(GONNA NEED A SOURCE TO USE THIS) |
+|`F_MIN`| is specified to remove noise|
+|`F_MAX`| is specified to remove noise; defined by ***Nyquist theorem*** |
+|***FEATURE***||
+| `zcr_mean` | Average Zero Crossing Rate. Measures how frequently the audio signal changes sign. |
+| `centroid_mean` | Average Spectral Centroid. Represents the brightness of the sound. |
+| `rolloff_mean` | Average Spectral Rolloff. Represents the frequency below which a specified percentage (usually 85%) of spectral energy is contained. |
+| `rms_mean` | Average Root Mean Square energy. Measures the overall signal energy or loudness level. |

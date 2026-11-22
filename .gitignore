@@ -28,5 +28,7 @@ Artists
 Samples
 Vocals
 venv
+
 *.csv
 *.npy
+*.npz

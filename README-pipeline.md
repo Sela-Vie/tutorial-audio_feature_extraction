@@ -1,5 +1,11 @@
 #### PIPELINE
 
+how to extract, from any Speech signal
+- Magnitude Spectra
+- Mel-Frequency Cepstral Coefficients
+- Perceptual Linear Prediction Coefficients
+- Linear Predictive Coding Coeffieicnts
+
 ```
       Speech signal
             |
@@ -80,7 +86,7 @@ context:
 - 400 samples
 - 16_000 hz sampling rate
 
-##### bins an theoretically representable frequencies
+##### FFT: bins and theoretically representable frequencies
 
 - highest theoretically representable frequency is defined by the ***Nyquist theorem***
 

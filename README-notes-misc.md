@@ -24,7 +24,10 @@ $$
 - note: `cepstrum` is an anagram of `spectrum`
 - note: MFCC is just a cepstrum converted to the mel scale
 
-#### FFT vs. Short-Time FT
+#### FFT(Fast) vs. STFT(Short-Time) vs DFT(Discrete FT)
+
+STFT has built in framing function
+- time-frequency arruracy trade off on the frame length
 
 ## DATASET SPLITTING BEFORE FRAMING
 
@@ -35,6 +38,12 @@ If `Artists/` contains the original audio and `Samples/` contains shorter clips,
 - For pathological speech, split by speaker or patient when possible.
 - If speaker identity is unavailable, split by the original recording.
 - Do not split only by frame.
+
+
+#### SPECTRA VS SPECTRUM
+
+spectrum is singular
+spectra is plural
 
 ### SOURCES
 

@@ -33,7 +33,7 @@ python="$absolute_directory_m0/venv/bin/python3"
 jupyter_config="$absolute_directory_m0/.jupyter/jupyter_server_config.py"
 
 echo "START $(date -Iseconds)" 1>> $LOG
-tmux_send_keys "cd $absolute_folder_path_m0"
+tmux_send_keys "cd $absolute_directory_m0"
 tmux_send_keys "$python -m jupyter lab --config=$jupyter_config"
 
 tmux split-window -h -t "$session_name"

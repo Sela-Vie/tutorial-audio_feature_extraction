@@ -28,7 +28,9 @@ Artists
 Samples
 Vocals
 venv
+tempCodeRunner
 
 *.csv
 *.npy
 *.npz
+*.bak

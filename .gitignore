@@ -1,8 +1,6 @@
 __pycache__
 settings.json
 ./.vscode
-./.ipynb_checkpoints
-./.virtual_documents
 tempCodeRunnerFile.py
 *.code-workspace
 _.py
@@ -31,6 +29,9 @@ Samples
 Vocals
 venv
 tempCodeRunner
+
+.ipynb_checkpoints
+.virtual_documents
 
 *.csv
 *.npy

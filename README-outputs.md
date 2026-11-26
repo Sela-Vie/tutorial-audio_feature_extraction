@@ -2,9 +2,12 @@
 
 This file describes the NumPy outputs used by the audio preprocessing notebooks.
 
-## Framed audio: `preprocessing-01-framing.npz`
+## `preprocessing-01-framing.npz`
 
 Produced by: `preprocessing-01-framing.ipynb`
+outputs
+- preprocessing-01-framing.npz
+- preprocessing-01-path-encoder.joblib
 
 The notebook loads supported audio files from `Artists`, converts each file to mono at 16 kHz, then divides it into overlapping frames. Each frame has 400 samples (25 ms), and consecutive frames start 160 samples (10 ms) apart.
 
@@ -19,7 +22,10 @@ The `.npz` archive contains four aligned arrays. Row `i` in each array refers to
 
 The fitted scikit-learn `LabelEncoder` is saved separately as `preprocessing-01-path-encoder.joblib`. Use its `inverse_transform` method to map path codes to the relative source paths used by the encoder. The codes refer to paths relative to `Artists`.
 
+import joblib
+
 Load the archive with `np.load(path, allow_pickle=False)`. The member names and dtypes are numeric, so the archive does not need pickle.
+Load the label encoder with `path_encoder:LabelEncoder = joblib.load("preprocessing-01-path-encoder.joblib")`
 
 ## Downstream preprocessing notebooks
 
